@@ -131,7 +131,7 @@ $ kubectl edit configmap argocd-rbac-cm -n argocd
 data:
   policy.csv: |
     g, user1, role:admin
-  policy.default: role:''
+  policy.default: role.readonly
 
 ```
 
