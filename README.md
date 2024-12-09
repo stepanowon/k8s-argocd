@@ -145,3 +145,9 @@ $ argocd logout 192.168.56.51
 $ argocd login 192.168.56.51
 ```
 
+##  kubeconfig중 Current Context의 클러스터를 Argocd서버에 등록
+```sh
+CURRENT_CONTEXT=`kubectl config view -o jsonpath='{.current-context}'`
+argocd cluster add $CURRENT_CONTEXT
+```
+
